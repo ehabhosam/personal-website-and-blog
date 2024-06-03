@@ -1,5 +1,4 @@
 import './page.css';
-import { ArrowIcon } from 'app/page';
 
 const projects: ProjectCardProps[] = [
   {
@@ -177,5 +176,22 @@ function SkillBadge(props: { children: React.ReactNode }) {
     <span className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 py-0.5 px-1 text-xs leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-2 mb-2">
       {props.children}
     </span>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+        fill="currentColor"
+      />
+    </svg>
   );
 }
