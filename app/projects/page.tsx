@@ -2,6 +2,27 @@ import './page.css';
 
 const projects: ProjectCardProps[] = [
   {
+    title: 'Optics3k',
+    subtitle: 'July 2024 – Auguet 2024',
+    techStack: [
+      'Node.js',
+      'Nest.js',
+      'MySQL',
+      'TypeScript',
+      'Next.js',
+      'React.js',
+      'ShadcnUI',
+    ],
+    description:
+      "Led the development of full-stack e-commerce project for a glasses store, designing & building its backend and building an admin dashboard.",
+    link: 'https://apps.apple.com/app/3k-pro/id6587550249',
+    points: [
+      'Nest.js REST API, MySQL database with Prisma ORM.',
+      'JWT Auth & RBAC for secure API access.',
+      'Next.js admin dashboard.',
+    ],
+  },
+  {
     title: 'Lyrise Website',
     subtitle: 'July 2023 - Oct 2023',
     techStack: [
