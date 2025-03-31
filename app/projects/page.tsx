@@ -14,7 +14,7 @@ const projects: ProjectCardProps[] = [
       'ShadcnUI',
     ],
     description:
-      "Led the development of full-stack e-commerce project for a glasses store, designing & building its backend and building an admin dashboard.",
+      'Led the development of full-stack e-commerce project for a glasses store, designing & building its backend and building an admin dashboard.',
     link: 'https://apps.apple.com/app/3k-pro/id6587550249',
     points: [
       'Nest.js REST API, MySQL database with Prisma ORM.',
@@ -136,7 +136,7 @@ export default function ProjectsPage() {
           explore <span className="font-semibold">some</span> of the projects
           I've worked on.
         </p>
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+        <hr className="my-6 border-neutral-400 dark:border-neutral-800" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project) => (
@@ -159,7 +159,7 @@ type ProjectCardProps = {
 
 function ProjectCard(props: ProjectCardProps) {
   return (
-    <div className="project-card px-6 border rounded-lg transition duration-300 ease-in-out hover:bg-neutral-950 hover:shadow-lg hover:shadow-neutral-400">
+    <div className="project-card px-6 border-2 border-neutral-400 dark:border-neutral-800 rounded-lg duration-300 ease-in-out hover:bg-neutral-50/20 dark:hover:bg-neutral-950/10 hover:shadow-lg hover:shadow-neutral-200 dark:hover:shadow-neutral-400 transition-colors">
       {props.link ? (
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
           <a href={props.link} className="flex gap-2 items-center">
@@ -172,7 +172,7 @@ function ProjectCard(props: ProjectCardProps) {
           {props.title}
         </h2>
       )}
-      <p className="text-neutral-600 dark:text-neutral-400 text-sm mb-4">
+      <p className="text-neutral-400 dark:text-neutral-600 text-sm mb-4">
         {props.subtitle}
       </p>
       {props.techStack && (
@@ -194,7 +194,7 @@ function ProjectCard(props: ProjectCardProps) {
 
 function SkillBadge(props: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 py-0.5 px-1 text-xs leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-2 mb-2">
+    <span className="inline-flex items-center rounded border border-neutral-700 bg-neutral-700 py-0.5 px-1 text-xs leading-4 text-neutral-100 no-underline dark:border-neutral-200 dark:bg-neutral-50 dark:text-neutral-900 mr-2 mb-2">
       {props.children}
     </span>
   );

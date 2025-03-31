@@ -1,14 +1,16 @@
-import './global.css';
-import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
-import { Navbar } from './components/nav';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import bg from 'public/images/home/bg.jpg';
 import { SandpackCSS } from './blog/[slug]/sandpack';
+import { Navbar } from './components/nav';
+import './global.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://leerob.io'),
+  metadataBase: new URL('https://ehabhosam.vercel.app'),
   title: {
     default: 'Ehab Hosam',
     template: '%s | Ehab Hosam',
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ehab Hosam',
     description: 'Software Engineer',
-    url: 'https://leerob.io',
+    url: 'https://ehabhosam.vercel.app',
     siteName: 'Ehab Hosam',
     locale: 'en_US',
     type: 'website',
@@ -56,7 +58,7 @@ export default function RootLayout({
       className={cx(
         'text-black bg-white dark:text-white dark:bg-[#111010]',
         GeistSans.variable,
-        GeistMono.variable
+        GeistMono.variable,
       )}
     >
       <head>
@@ -69,6 +71,16 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
         </main>
+        <div className="fixed top-0 h-screen w-screen left-0 right-0 z-[-1]">
+          <Image
+            src={bg}
+            alt="Background Image"
+            layout="fill"
+            objectFit="cover"
+            priority
+            className="bottom-0 z-[-2] opacity-25"
+          />
+        </div>
       </body>
     </html>
   );

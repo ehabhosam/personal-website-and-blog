@@ -1,33 +1,46 @@
-import { Suspense } from 'react';
 import { unstable_noStore as noStore } from 'next/cache';
 import Image from 'next/image';
-import grad from 'public/images/home/grad.jpg';
-import discuss from 'public/images/home/discuss.png';
-import nile from 'public/images/home/nile.jpeg';
-import sea from 'public/images/home/sea.jpeg';
-import selfie from 'public/images/home/selfie.jpeg';
-import setup from 'public/images/home/setup.jpg';
+
+// import ibiza from 'public/images/home/Ibiza.jpg';
+// import discuss from 'public/images/home/discuss.png';
+// import ehab from 'public/images/home/ehab.jpeg';
+// import meOcean from 'public/images/home/me-ocean.jpeg';
+// import sea from 'public/images/home/sea.jpeg';
+// import setup from 'public/images/home/setup.jpg';
+import ibiza from 'public/images/home/cartoon/ibiza.png';
+import discuss from 'public/images/home/cartoon/discuss.png';
+import ehab from 'public/images/home/cartoon/grad.png';
+import meOcean from 'public/images/home/cartoon/me-ocean.png';
+import sea from 'public/images/home/cartoon/sea.png';
+import setup from 'public/images/home/cartoon/setup.png';
+import { Suspense } from 'react';
 
 import ViewCounter from 'app/blog/view-counter';
-import { PreloadResources } from 'app/preload';
 import {
   getLeeYouTubeSubs,
   getVercelYouTubeSubs,
   getViewsCount,
 } from 'app/db/queries';
+import { PreloadResources } from 'app/preload';
+import {
+  GitHubLogo,
+  InstagramLogo,
+  LinkedInLogo,
+  TwitterLogo,
+} from './components/social-logos';
 
 export default function Page() {
   return (
     <section>
       <PreloadResources />
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
-        hello, this is ehab 👋
+        yeah, you found me 👋
       </h1>
       <p className="prose prose-neutral dark:prose-invert">
-        As a passionate software developer, I am dedicated to creating software
-        solutions that tackle real-world problems and improve daily life. Every
-        day, I strive to refine my skills and become a better engineer, driven
-        by the goal of making a positive impact through technology.
+        A passionate software developer dedicated to creating solutions that
+        tackle real-world problems and improve daily life. Every day, I strive
+        to refine my skills and become a better engineer, driven by the goal of
+        making a positive impact through technology.
         {/* {`I'm a frontend developer, optimist, and community builder. I currently `}
         <Link href="/work">work</Link>
         {` as the VP of Product at `}
@@ -85,8 +98,8 @@ export default function Page() {
         </div>
         <div className="relative sm:row-span-2 row-span-1">
           <Image
-            alt="A selfie of myself, nothing special but I like it."
-            src={selfie}
+            alt="Me holding my graduation project book after project discussion."
+            src={ehab}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -95,8 +108,8 @@ export default function Page() {
         </div>
         <div className="relative">
           <Image
-            alt="A picture I took of the Nile River in Egypt, next to my home town."
-            src={nile}
+            alt="A picture of Ibiza, Spain, one of the places I hope to visit someday."
+            src={ibiza}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -105,8 +118,8 @@ export default function Page() {
         </div>
         <div className="relative row-span-2">
           <Image
-            alt="Me holding my graduation project book after project discussion."
-            src={grad}
+            alt="A picture one of my friends took of me at the beach."
+            src={meOcean}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -153,71 +166,7 @@ export default function Page() {
         </p>
       </div>
 
-      {/* Featured blog posts */}
-
-      {/* <div className="my-8 flex w-full flex-col space-y-4">
-        <BlogLink
-          name="What Makes A Great Developer Experience?"
-          slug="developer-experience"
-        />
-        <BlogLink name="What is Developer Relations?" slug="devrel" />
-        <BlogLink name="The Story of Heroku" slug="heroku" />
-      </div> */}
-
-      {/* badges can be used for skills for example */}
-
-      {/* <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          I invest small angel checks into early stage startups building tools
-          for developers.
-        </p>
-      </div>
-      <div className="my-8 flex h-14 w-full flex-row space-x-2 overflow-x-auto">
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://linear.app">
-            <svg width="78" height="20" role="img" aria-label="Linear logo">
-              <use href="/sprite.svg#linear" />
-            </svg>
-          </a>
-        </div>
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://supabase.com">
-            <svg width="100" height="19" role="img" aria-label="Supabase logo">
-              <use href="/sprite.svg#supabase" />
-            </svg>
-          </a>
-        </div>
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://www.makeswift.com/blog/makeswift-is-joining-bigcommerce">
-            <svg width="96" height="19" role="img" aria-label="Makeswift logo">
-              <use href="/sprite.svg#makeswift" />
-            </svg>
-          </a>
-        </div>
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://resend.com">
-            <svg width="70" height="17" role="img" aria-label="Resend logo">
-              <use href="/sprite.svg#resend" />
-            </svg>
-          </a>
-        </div>
-        <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://bun.sh">
-            <svg width="35" height="27" role="img" aria-label="Bun logo">
-              <use href="/sprite.svg#bun" />
-            </svg>
-          </a>
-        </div>
-      </div> */}
-      {/* <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          I've worked with and advised companies on{' '}
-          <Link href="/blog/developer-marketing">developer marketing</Link>,{' '}
-          <Link href="/blog/devrel">developer relations</Link>, building
-          open-source communities, product-led growth, and more.
-        </p>
-      </div> */}
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+      <ul className="font-sm mt-8 flex space-x-0 items-center text-neutral-600 md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -225,8 +174,45 @@ export default function Page() {
             target="_blank"
             href="https://twitter.com/ehab7osam"
           >
-            <ArrowIcon />
-            <p className="ml-2 h-7">follow me</p>
+            <p className="h-7">
+              <TwitterLogo />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://instagram.com/ehab7osam"
+          >
+            <p className="h-7">
+              <InstagramLogo />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/ehabhosam"
+          >
+            <p className="h-7">
+              <LinkedInLogo />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.github.com/ehabhosam"
+          >
+            <p className="h-7">
+              <GitHubLogo />
+            </p>
           </a>
         </li>
         <li className="flex-1"></li>
@@ -239,7 +225,7 @@ export default function Page() {
             href="mailto:ehab.hosam2019@gmail.com"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">email</p>
+            <p className="mx-2 h-7">email</p>
           </a>
         </li>
         {/* whatsapp */}
