@@ -20,9 +20,14 @@ export default function WorkPage() {
       <div className="prose prose-neutral dark:prose-invert">
         <p>here is a snapshot of my young professional journey.</p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Military Gap Year</h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+          Manadatory Military Service Year, January 2025 - Present
+        </p>
+        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Lyrise</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Front-end Engineer, July 2023 — Present
+          Front-end Engineer, July 2023 — December 2024
         </p>
         <p>
           At <a href="https://lyrise.ai">Lyrise</a>, led front-end development
