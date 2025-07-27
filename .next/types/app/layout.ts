@@ -1,4 +1,4 @@
-// File: /home/unixehab/dev/personal-website-and-blog/app/layout.tsx
+// File: /home/goatehab/dev/personal-website-and-blog/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

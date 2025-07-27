@@ -6,6 +6,7 @@ type Metadata = {
   publishedAt: string;
   summary: string;
   image?: string;
+  tags?: string[];
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -20,7 +21,18 @@ function parseFrontmatter(fileContent: string) {
     let [key, ...valueArr] = line.split(': ');
     let value = valueArr.join(': ').trim();
     value = value.replace(/^['"](.*)['"]$/, '$1'); // Remove quotes
-    metadata[key.trim() as keyof Metadata] = value;
+
+    const trimmedKey = key.trim() as keyof Metadata;
+
+    // Handle tags as comma-separated values
+    if (trimmedKey === 'tags') {
+      (metadata as any)[trimmedKey] = value
+        .split(',')
+        .map(tag => tag.trim())
+        .filter(tag => tag.length > 0);
+    } else {
+      (metadata as any)[trimmedKey] = value;
+    }
   });
 
   return { metadata: metadata as Metadata, content };
@@ -57,4 +69,32 @@ function getMDXData(dir) {
 
 export function getBlogPosts() {
   return getMDXData(path.join(process.cwd(), 'content'));
+}
+
+export function getBlogTags() {
+  const posts = getBlogPosts();
+  const tagCache: Record<string, Array<{ slug: string; title: string; publishedAt: string }>> = {};
+
+  posts.forEach((post) => {
+    const tags = post.metadata.tags || [];
+    tags.forEach((tag) => {
+      if (!tagCache[tag]) {
+        tagCache[tag] = [];
+      }
+      tagCache[tag].push({
+        slug: post.slug,
+        title: post.metadata.title,
+        publishedAt: post.metadata.publishedAt,
+      });
+    });
+  });
+
+  // Sort posts within each tag by publication date (newest first)
+  Object.keys(tagCache).forEach((tag) => {
+    tagCache[tag].sort((a, b) => {
+      return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+    });
+  });
+
+  return tagCache;
 }
