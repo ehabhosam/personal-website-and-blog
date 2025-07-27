@@ -9,9 +9,8 @@ import TagList from 'app/components/tag-list';
 import { increment } from 'app/db/actions';
 import { unstable_noStore as noStore } from 'next/cache';
 
-export async function generateMetadata({
-  params,
-}): Promise<Metadata | undefined> {
+export async function generateMetadata(props): Promise<Metadata | undefined> {
+  const params = await props.params;
   let post = getBlogPosts().find((post) => post.slug === params.slug);
   if (!post) {
     return;
@@ -83,7 +82,8 @@ function formatDate(date: string) {
   }
 }
 
-export default function Blog({ params }) {
+export default async function Blog(props) {
+  const params = await props.params;
   let post = getBlogPosts().find((post) => post.slug === params.slug);
 
   if (!post) {

@@ -1,114 +1,86 @@
 {
   "node": {
-    "490ffa4d540e39a3134089e8ad1d4d98029daafb": {
+    "0026b8b16c946c39d417010971370191e7725072b3": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
+        "app/blog/page": {
+          "moduleId": "[project]/.next-internal/server/app/blog/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
       },
       "layer": {
-        "app/page": "rsc",
         "app/blog/page": "rsc",
-        "app/blog/[slug]/page": "rsc"
+        "app/page": "rsc"
       }
     },
-    "756e927c6af404b88ef82aaa5cfaa614baa7b14d": {
+    "0065f06c65e293b2ae619f597c4dc061d6faf917ba": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
+        "app/blog/page": {
+          "moduleId": "[project]/.next-internal/server/app/blog/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
       },
       "layer": {
-        "app/page": "rsc",
         "app/blog/page": "rsc",
-        "app/blog/[slug]/page": "rsc"
+        "app/page": "rsc"
       }
     },
-    "8ace7b7412292641817d32838035bbb8178bc6eb": {
+    "00c2dfe567e0c42693c4e559cce536152b2a6bdbea": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
+        "app/blog/page": {
+          "moduleId": "[project]/.next-internal/server/app/blog/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
       },
       "layer": {
-        "app/page": "rsc",
         "app/blog/page": "rsc",
-        "app/blog/[slug]/page": "rsc"
+        "app/page": "rsc"
       }
     },
-    "b9064fb20d93a900486e1d2ebdd93b6d6d4ca266": {
+    "7faa5ccb0360363ba78e0a6aeccdaa2f3225de34e8": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
+        "app/blog/page": {
+          "moduleId": "[project]/.next-internal/server/app/blog/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
       },
       "layer": {
-        "app/page": "rsc",
         "app/blog/page": "rsc",
-        "app/blog/[slug]/page": "rsc"
+        "app/page": "rsc"
       }
     },
-    "eb17ca137a94c36d18c826b47bb323420c920e16": {
+    "7fe74c0b40522252891d7446afb6206b486091bb02": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
+        "app/blog/page": {
+          "moduleId": "[project]/.next-internal/server/app/blog/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/db/queries.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
       },
       "layer": {
-        "app/page": "rsc",
         "app/blog/page": "rsc",
-        "app/blog/[slug]/page": "rsc"
-      }
-    },
-    "f8f73ad43ab1d3098093de03b48f84bc7e8ad834": {
-      "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
-      },
-      "layer": {
-        "app/page": "rsc",
-        "app/blog/page": "rsc",
-        "app/blog/[slug]/page": "rsc"
-      }
-    },
-    "ff305b7f0a0aa37543799b271778b95475fcac28": {
-      "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%5D&__client_imported__=!",
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
-      },
-      "layer": {
-        "app/page": "rsc",
-        "app/blog/page": "rsc",
-        "app/blog/[slug]/page": "rsc"
-      }
-    },
-    "796e165bcd3373f1f3ace317a474fcc88f6cdefc": {
-      "workers": {
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
-      },
-      "layer": {
-        "app/blog/[slug]/page": "rsc"
-      }
-    },
-    "e49f49a44b7728b85d8c772bcdd6d27517012b0c": {
-      "workers": {
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
-      },
-      "layer": {
-        "app/blog/[slug]/page": "rsc"
-      }
-    },
-    "f51a5272a6e4662c6fac9c1c80128cb3c1c6b9c7": {
-      "workers": {
-        "app/blog/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Fqueries.tsx%22%2C%5B%22%24%24ACTION_0%22%2C%22getGuestbookEntries%22%2C%22%24%24ACTION_1%22%2C%22getLeeYouTubeSubs%22%2C%22getViewsCount%22%2C%22getVercelYouTubeSubs%22%2C%22getBlogViews%22%5D%5D%2C%5B%22%2Fhome%2Fgoatehab%2Fdev%2Fpersonal-website-and-blog%2Fapp%2Fdb%2Factions.ts%22%2C%5B%22saveGuestbookEntry%22%2C%22deleteGuestbookEntries%22%2C%22increment%22%5D%5D%5D&__client_imported__=!"
-      },
-      "layer": {
-        "app/blog/[slug]/page": "rsc"
+        "app/page": "rsc"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "clsDQA9qTkoAagpY2wL5tJYJW8+ktcOCfFmVewczP0Y="
+  "encryptionKey": "rrtv/jK/Jgrze+qB7IjhWm7WEQDP42AqR0kNUYMfSAY="
 }
