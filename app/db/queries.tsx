@@ -42,14 +42,11 @@ export async function getViewsCount(): Promise<
   }
 
   noStore();
-  // return sql`
-  //   SELECT slug, count
-  //   FROM views
-  // `;
+  return sql`
+    SELECT slug, count
+    FROM views
+  `;
 
-  return new Promise((resolve, reject) => {
-    return resolve([{ slug: 'test', count: 100 }]);
-  });
 }
 
 export const getLeeYouTubeSubs = cache(
