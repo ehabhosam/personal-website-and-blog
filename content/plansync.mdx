@@ -1,0 +1,79 @@
+---
+title: "Plansync"
+summary: "A simple time-blocking planner built with Nest.js, Go, Supabase, and gRPC."
+publishedAt: 2025-08-19
+tags: 'Side Project'
+---
+
+I’ve been working on a side project recently called **Plansync**, and I’d love to share it with you.  
+
+Plansync is a web app designed to help organize your time by assigning tasks to specific time blocks. You can use it for both short- and long-term planning—whether you’re scheduling your upcoming week or mapping out an entire year (with larger blocks and broader goals). The whole system is powered by a single, simple algorithm that’s easy to understand and apply.  
+
+---
+
+## Flow  
+
+When you log in and create a new plan, you start by entering some basic details about it. Plansync supports two types of to-dos:  
+
+- **Tasks** → one-off actions that need to be completed.  
+- **Routines** → recurring tasks you’ll repeat daily, weekly, or monthly (depending on the period you choose).  
+
+After entering your tasks and routines, the app calculates your time constraints. You then decide how much you’d like to work per unit of time (within those limits). From there, Plansync generates a plan that balances everything for you.  
+
+For quick planning, there’s also an alternative flow called the **Overwhelm Organizer**. It’s designed for creating one-day or multi-day plans on the fly. It uses the same backend but provides a faster, more streamlined frontend UI.  
+
+---
+
+## Architecture  
+
+<Image src="/images/blog/arch.png" alt="Plansync Architecture" width="800" height="800" />
+
+Plansync is built on a lightweight microservices architecture:  
+
+- **Nest.js API** – serves as the main API gateway.  
+- **Golang Planning Service** – contains the core planning algorithm, isolated from the rest of the app.  
+- **Supabase** – provides authentication and database services.  
+
+The frontend communicates with the backend over JSON/HTTP, authenticated through Supabase Auth. However, Plansync isn’t tightly coupled to Supabase as a full BaaS—it uses it more like standalone services. For example, Supabase Auth could easily be swapped out for Clerk, or the database could be replaced with any Postgres instance by just updating the connection string.  
+
+The planning service, written in Go, is only accessible via the Nest.js API gateway. The two communicate over **gRPC**, keeping the architecture clean and modular.  
+
+---
+
+## Planning Algorithm  
+
+
+
+The planning algorithm is simple but effective. It’s based on **Periods** and **Blocks**:  
+
+- **Periods** are the larger units (days, weeks, months).  
+- **Blocks** are the smaller divisions within each period (hours, days, weeks, depending on the scale).  
+
+The result is essentially a table of periods, each containing its corresponding blocks.  
+
+### Steps to Create a Plan:  
+
+1. Initialize a table with `n_periods × n_blocks` slots.  
+2. Insert routines into every period first.  
+3. Sort tasks by priority (high → normal → low), then order them (non-breakable first, then by required time).  
+4. Distribute tasks greedily:  
+   - Non-breakable tasks are placed in full chunks.  
+   - Breakable tasks are split across periods.  
+5. If a task doesn’t fit, rebalance or add a new period, then continue until all tasks are placed.  
+
+It’s not the most optimized approach, but it’s straightforward and works well for now.  
+
+---
+
+## Wrapping Up  
+
+Plansync isn’t a production-ready tool—it’s more of a hobby project where I challenged myself to:  
+
+- Practice Go by implementing the planning logic.  
+- Explore inter-service communication with gRPC.  
+- Experiment with a modular, microservices-style architecture.  
+
+You can check out the full source code here:  
+👉 [Plansync GitHub Repository](https://github.com/ehabhosam/plansync)  
+
+I already deployed the backend to an Amazon ec2 instance, and the frontend to Vercel and everything went well for getting feedback from my circle of devs/friends, but I'm not exposing it honestly (for financial reasons LMAO). Feel free to run it locally on your machine :)
